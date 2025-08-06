@@ -1,9 +1,10 @@
-import { useState, useRef, ChangeEvent } from "react";
+import { useState, useRef } from "react";
+import type { ChangeEvent } from "react";
 
 // Define el tipo para el estado del archivo seleccionado
 type VideoFile = File | null;
 
-const App: JSX.Element = () => {
+const App = () => {
   const [selectedFile, setSelectedFile] = useState<VideoFile>(null);
   const [videoPreviewUrl, setVideoPreviewUrl] = useState<string>("");
   const [fileName, setFileName] = useState<string>("");
